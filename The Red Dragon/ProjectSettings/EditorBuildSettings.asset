@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: d423f18a48692774ea87410d2df05e0a
   - enabled: 1
+    path: Assets/Scenes/BeginningScene.unity
+    guid: 99cef71aa153efe4aa5cf1a725999edf
+  - enabled: 1
+    path: Assets/Scenes/MiddleScene.unity
+    guid: 1e8a2fc5f7ef3bf4789c73b07cb4cf32
+  - enabled: 1
     path: Assets/Scenes/CastleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

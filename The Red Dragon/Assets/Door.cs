@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    GameManager gm;
+	[SerializeField] GameObject DoorType;
+	public int nextLevel;
+	int stateOfDoor = 1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	private void OnTriggerEnter2D(Collider2D col)
+	{
+			gm.LoadNextLevel(nextLevel);
+	}
+
+	private void Start()
+	{
+		gm = FindObjectOfType<GameManager>();
+	}
+
 }
