@@ -22,6 +22,7 @@ public class PlatformerPlayer : MonoBehaviour
     {
         float deltaX = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         Vector2 movement = new Vector2(deltaX, _body.velocity.y);
+        //_body.velocity = movement.normalized * speed + new Vector2(0.0f, _body.velocity.y);
         _body.velocity = movement;
 
         Vector3 max = _box.bounds.max;
@@ -31,6 +32,7 @@ public class PlatformerPlayer : MonoBehaviour
         Collider2D hit = Physics2D.OverlapArea(corner1, corner2);
 
         bool grounded = false;
+
         if (hit != null)
 		{
             grounded = true;
