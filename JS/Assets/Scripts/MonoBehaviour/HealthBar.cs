@@ -17,6 +17,7 @@ public class HealthBar : MonoBehaviour
 	private void Start()
 	{
         maxHitPoints = character.maxHitPoints;
+		hitPoints = FindObjectOfType<HealthBar>().hitPoints; //
 	}
 
 	private void Update()

@@ -5,18 +5,32 @@ public class Player : Character
 {
     public Inventory inventoryPrefab;
     Inventory inventory;
-
     public HitPoints hitPoints;
-
     public HealthBar healthBarPrefab;
     HealthBar healthBar;
 
-    private void OnEnable()
+/*    private void OnEnable()
     {
         ResetCharacter();
-    }
+    }*/
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public override void ResetCharacter()
+	{
+
+	}
+
+    public void SavePlayer()
+	{
+        GlobalControl.Instance.HP = hitPoints;
+	}
+
+	void Start()
+	{
+        //hitPoints = GlobalControl.Instance.HP;
+        StartingInventory();
+	}
+
+	void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("CanBePickedUp"))
         {
@@ -86,12 +100,11 @@ public class Player : Character
         Destroy(inventory.gameObject);
     }
 
-    public override void ResetCharacter()
+    public void StartingInventory()
     {
         inventory = Instantiate(inventoryPrefab);
         healthBar = Instantiate(healthBarPrefab);
         healthBar.character = this;
-
         hitPoints.value = startingHitPoints;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : Character
 {
-    float hitPoints;
+	float hitPoints;
 	public int damageStrength;
 	Coroutine damageCoroutine;
 
@@ -12,6 +12,7 @@ public class Enemy : Character
 	{
 		while (true)
 		{
+			StartCoroutine(FlickerCharacter());
 			hitPoints -= damage;
 
 			if (hitPoints <= float.Epsilon)
