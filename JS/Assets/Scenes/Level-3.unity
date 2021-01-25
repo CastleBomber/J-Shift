@@ -1726,8 +1726,12 @@ GameObject:
 =======
   - component: {fileID: 1588398757}
   m_Layer: 0
+<<<<<<< HEAD
   m_Name: added-by-tmp
 >>>>>>> .merge_file_a13056
+=======
+  m_Name: added-by-tmp-testx3
+>>>>>>> tmp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
