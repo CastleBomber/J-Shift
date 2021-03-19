@@ -1,1 +1,1 @@
-![] (Images/ gameplay.png)
+![] (JS/Images/ gameplay.png)
